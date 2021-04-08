@@ -45,8 +45,6 @@ public class AlgorithmizationSort2 {
 
             System.out.println(Arrays.toString(finalArray));
 
-
-
     }
 
 }
