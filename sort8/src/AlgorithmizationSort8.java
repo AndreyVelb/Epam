@@ -6,6 +6,7 @@
 public class AlgorithmizationSort8 {
     public static void main(String[] args) {
         int[] numerators = new int[] {3,5,8,10,2,6};
+        sortFraction(numerators);
         int[] denominators = new int[]{17,4,5,7,3,8};
 
         bringCommonDenom(numerators, denominators);
@@ -15,6 +16,20 @@ public class AlgorithmizationSort8 {
     public static void printFraction(int[] numerators, int[] denominators){
         for (int i=0; i<numerators.length; i++){
             System.out.println(numerators[i]+"/"+denominators[i]);
+        }
+    }
+    public static void sortFraction(int[] numerators){
+        boolean isSorted = false;
+        while(!isSorted) {
+            isSorted=true;
+            for (int i = 0; i < numerators.length-1; i++) {
+                if (numerators[i] > numerators[i + 1]) {
+                    int temp = numerators[i];
+                    numerators[i] = numerators[i + 1];
+                    numerators[i + 1] = temp;
+                    isSorted = false;
+                }
+            }
         }
     }
     public static void bringCommonDenom(int[] numerators, int[] denominators) {
