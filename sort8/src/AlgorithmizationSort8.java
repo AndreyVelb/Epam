@@ -6,10 +6,10 @@
 public class AlgorithmizationSort8 {
     public static void main(String[] args) {
         int[] numerators = new int[] {3,5,8,10,2,6};
-        sortFraction(numerators);
         int[] denominators = new int[]{17,4,5,7,3,8};
 
         bringCommonDenom(numerators, denominators);
+        sortFraction(numerators);
         printFraction(numerators,denominators);
 
     }
